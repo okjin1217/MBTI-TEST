@@ -1,9 +1,9 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 
- function goNext(){
+ function goNext(qIdx){
   var q = document.querySelector('.qBox');
-  q.innerHTML = qnaList[0].q;
+  q.innerHTML = qnaList[qIdx].q;
 }
 
 function begin(){
@@ -16,7 +16,8 @@ function begin(){
     main.style.display = "none";
     qna.style.display = "block";
     }, 450)
-    goNext();
+    let qIdx = 0;
+    goNext(qIdx);
   }, 450);
 }
 
