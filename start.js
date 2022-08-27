@@ -1,7 +1,7 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 
-function addAnswer(answerText){
+function addAnswer(answerTextt, qIdx){
   var a = document.querySelector('.answerBox');
   var answer = document.createElement('button');
   answer.classList.add('answerList')
@@ -14,13 +14,14 @@ function addAnswer(answerText){
         children[i].disabled = true;
         children[i].style.display = 'none';
       }
+     goNext(++qIdx);
    }, false);
 }
  function goNext(qIdx){
   var q = document.querySelector('.qBox');
   q.innerHTML = qnaList[qIdx].q;
   for(let i in qnaList[qIdx].a){
-    addAnswer(qnaList[qIdx].a[i].answer);
+    addAnswer(qnaList[qIdx].a[i].answert, qIdx);
   }
 }
 
