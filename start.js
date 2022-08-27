@@ -6,6 +6,9 @@ function addAnswer(answerText){
   var answer = document.createElement('button');
   a.appendChild(answer);
   answer.innerHTML = answerText;
+  
+  answer.addEventListener("click", function(){
+    }, false);
 }
  function goNext(qIdx){
   var q = document.querySelector('.qBox');
