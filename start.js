@@ -17,9 +17,15 @@ function addAnswer(answerText, qIdx) {
     var children = document.querySelectorAll('.answerList');
     for (let i = 0; i < children.length; i++) {
       children[i].disabled = true;
-      children[i].style.display = 'none';
+      children[i].style.WebkitAnimation = "fadeOut 1s";
+      children[i].style.animation = "fadeOut 1s";
     }
-    goNext(++qIdx);
+    setTimeout(() => {
+     for (let i = 0; i < children.length; i++) {
+       children[i].style.display = "none";
+     }
+     goNext(++qIdx);
+    },950)
   }, false);
 }
 
