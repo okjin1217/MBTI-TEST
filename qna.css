@@ -17,3 +17,8 @@
   width: 80%;
   border: 0px;
 }
+
+.answerList:hover, .answerList:focus{
+  background-color: pink;
+  color: whitesmoke;
+}
