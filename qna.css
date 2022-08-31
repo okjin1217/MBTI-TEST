@@ -32,4 +32,6 @@
 
 .statusBar{
   height: 100%;
+  background-color: red;
+  border-radius: 20px;
 }
