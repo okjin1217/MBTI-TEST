@@ -4,19 +4,6 @@ const result = document.querySelector("#result");
 const endPoint = 12;
 const select = [];
 
-function goResult() {
-  qna.style.WebkitAnimation = "fadeOut 1s";
-  qna.style.animation = "fadeOut 1s";
-  setTimeout(() => {
-    result.style.WebkitAnimation = "fadeIn 1s";
-    result.style.animation = "fadeIn 1s";
-    setTimeout(() => {
-      qna.style.display = "none";
-      result.style.display = "block"
-    }, 450)
-  })
-  calResult();
-}
 
 function calResult(){
   var pointArray =[
@@ -55,6 +42,20 @@ function calResult(){
   console.log(resultArray);
   let resultword = resultArray[0].key;
   return resultword;
+}
+
+function goResult() {
+  qna.style.WebkitAnimation = "fadeOut 1s";
+  qna.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    result.style.WebkitAnimation = "fadeIn 1s";
+    result.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      qna.style.display = "none";
+      result.style.display = "block"
+    }, 450)
+  })
+  calResult();
 }
 
 function addAnswer(answerText, qIdx, idx) {
